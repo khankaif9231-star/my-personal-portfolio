@@ -5,19 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ismail Amin Khan | Portfolio</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #1a1a1a; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .container { text-align: center; border: 2px solid #3498db; padding: 40px; border-radius: 15px; background: #222; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        h1 { color: #3498db; margin: 0; font-size: 2.5rem; }
-        p { font-size: 1.2rem; color: #ccc; margin: 10px 0; }
-        .badge { background: #e74c3c; color: white; padding: 5px 15px; border-radius: 20px; font-size: 14px; display: inline-block; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: white; line-height: 1.6; }
+        .container { max-width: 800px; margin: 50px auto; padding: 20px; }
+        
+        /* Header Section */
+        header { text-align: center; margin-bottom: 50px; }
+        h1 { font-size: 2.5rem; color: #38bdf8; }
+        .badge { background: #0ea5e9; color: white; padding: 5px 15px; border-radius: 20px; font-size: 14px; display: inline-block; margin-top: 10px; }
+
+        /* About Section */
+        .section { background: #1e293b; padding: 30px; border-radius: 15px; margin-bottom: 30px; border: 1px solid #334155; }
+        h2 { color: #38bdf8; margin-bottom: 15px; border-bottom: 2px solid #38bdf8; display: inline-block; }
+
+        /* Skills Section */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px; margin-top: 15px; }
+        .skill-tag { background: #334155; padding: 10px; border-radius: 8px; text-align: center; font-weight: bold; transition: 0.3s; }
+        .skill-tag:hover { background: #38bdf8; color: #0f172a; transform: translateY(-5px); }
+
+        /* Button Style for LinkedIn */
+        .btn { display: inline-block; background: #0077b5; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 10px; transition: 0.3s; }
+        .btn:hover { background: #005a87; box-shadow: 0 0 15px rgba(0,119,181,0.5); }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <div class="badge">BCA Final Year Student</div>
-        <h1>Ismail Amin Khan</h1>
-        <p>Software Developer in the making...</p>
-        <p><strong>Website Status:</strong> Development is Live! 🚀</p>
+        <header>
+            <div class="badge">BCA Final Year Student</div>
+            <h1>Ismail Amin Khan</h1>
+            <p>Future Software Engineer | Problem Solver</p>
+        </header>
+
+        <section class="section">
+            <h2>About Me</h2>
+            <p>Main ek BCA student hoon jo software engineering aur backend technologies mein dilchaspi rakhta hai. Main hamesha nayi coding languages seekhne aur real-world problems solve karne ke liye active rehta hoon.</p>
+        </section>
+
+        <section class="section">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-tag">Java</div>
+                <div class="skill-tag">SQL</div>
+                <div class="skill-tag">Python</div>
+                <div class="skill-tag">HTML/CSS</div>
+                <div class="skill-tag">JavaScript</div>
+            </div>
+        </section>
+
+        <section class="section" style="text-align: center;">
+            <h2>Connect With Me</h2>
+            <p>Aap mujhse professional queries ke liye LinkedIn par jud sakte hain.</p>
+            <a href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank" class="btn">View My LinkedIn Profile</a>
+        </section>
     </div>
+
 </body>
 </html>
