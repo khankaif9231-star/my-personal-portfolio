@@ -5,59 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ismail Amin Khan | Portfolio</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: white; line-height: 1.6; }
-        .container { max-width: 800px; margin: 50px auto; padding: 20px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; transition: 0.3s; }
+        body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: white; line-height: 1.6; }
+        .container { max-width: 900px; margin: auto; padding: 20px; }
         
-        /* Header Section */
-        header { text-align: center; margin-bottom: 50px; }
-        h1 { font-size: 2.5rem; color: #38bdf8; }
-        .badge { background: #0ea5e9; color: white; padding: 5px 15px; border-radius: 20px; font-size: 14px; display: inline-block; margin-top: 10px; }
+        /* Header */
+        header { text-align: center; padding: 50px 0; border-bottom: 1px solid #1e293b; }
+        h1 { font-size: 3rem; color: #38bdf8; margin-bottom: 10px; }
+        .badge { background: #0ea5e9; padding: 5px 15px; border-radius: 20px; font-size: 14px; }
 
-        /* About Section */
-        .section { background: #1e293b; padding: 30px; border-radius: 15px; margin-bottom: 30px; border: 1px solid #334155; }
-        h2 { color: #38bdf8; margin-bottom: 15px; border-bottom: 2px solid #38bdf8; display: inline-block; }
+        /* Sections */
+        section { padding: 40px 0; }
+        h2 { color: #38bdf8; margin-bottom: 20px; border-left: 5px solid #38bdf8; padding-left: 15px; }
 
-        /* Skills Section */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 15px; margin-top: 15px; }
-        .skill-tag { background: #334155; padding: 10px; border-radius: 8px; text-align: center; font-weight: bold; transition: 0.3s; }
-        .skill-tag:hover { background: #38bdf8; color: #0f172a; transform: translateY(-5px); }
+        /* Projects Grid */
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .project-card { background: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #334155; }
+        .project-card:hover { transform: translateY(-10px); border-color: #38bdf8; }
+        .project-card h3 { color: #38bdf8; margin-bottom: 10px; }
+        .project-card p { font-size: 14px; color: #94a3b8; }
 
-        /* Button Style for LinkedIn */
-        .btn { display: inline-block; background: #0077b5; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 10px; transition: 0.3s; }
-        .btn:hover { background: #005a87; box-shadow: 0 0 15px rgba(0,119,181,0.5); }
+        /* Skills */
+        .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-tag { background: #334155; padding: 8px 15px; border-radius: 5px; font-size: 14px; }
+        .skill-tag:hover { background: #38bdf8; color: #0f172a; }
+
+        /* Footer */
+        footer { text-align: center; padding: 30px; border-top: 1px solid #1e293b; color: #64748b; }
     </style>
 </head>
 <body>
 
     <div class="container">
         <header>
-            <div class="badge">BCA Final Year Student</div>
             <h1>Ismail Amin Khan</h1>
-            <p>Future Software Engineer | Problem Solver</p>
+            <div class="badge">BCA Final Year | Developer</div>
+            <p style="margin-top: 15px;">Building digital solutions with Code & Logic.</p>
         </header>
 
-        <section class="section">
+        <section id="about">
             <h2>About Me</h2>
-            <p>Main ek BCA student hoon jo software engineering aur backend technologies mein dilchaspi rakhta hai. Main hamesha nayi coding languages seekhne aur real-world problems solve karne ke liye active rehta hoon.</p>
+            <p>Main ek aspiring Software Engineer hoon jo backend aur cloud technologies seekh raha hai. Mera goal real-world problems ke liye scalable solutions banana hai.</p>
         </section>
 
-        <section class="section">
-            <h2>My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-tag">Java</div>
-                <div class="skill-tag">SQL</div>
-                <div class="skill-tag">Python</div>
-                <div class="skill-tag">HTML/CSS</div>
-                <div class="skill-tag">JavaScript</div>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>Mera personal portfolio jo HTML, CSS aur JavaScript se bana hai aur Vercel par live hai.</p>
+                    <p style="margin-top: 10px; font-weight: bold; color: #38bdf8;">Tech: HTML, CSS, Vercel</p>
+                </div>
+                <div class="project-card">
+                    <h3>Future Project</h3>
+                    <p>Yahan main apna naya Python ya Java based project add karunga. Raat-din kaam jari hai! 🚀</p>
+                    <p style="margin-top: 10px; font-weight: bold; color: #38bdf8;">Tech: Coding in Progress</p>
+                </div>
             </div>
         </section>
 
-        <section class="section" style="text-align: center;">
-            <h2>Connect With Me</h2>
-            <p>Aap mujhse professional queries ke liye LinkedIn par jud sakte hain.</p>
-            <a href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank" class="btn">View My LinkedIn Profile</a>
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Vercel Deployment</span>
+            </div>
         </section>
+
+        <footer>
+            <p>&copy; 2026 Ismail Amin Khan. Made in Mumbai.</p>
+        </footer>
     </div>
 
 </body>
