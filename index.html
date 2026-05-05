@@ -8,43 +8,33 @@
         * { margin: 0; padding: 0; box-sizing: border-box; transition: 0.3s; }
         body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: white; line-height: 1.6; }
         .container { max-width: 900px; margin: auto; padding: 20px; }
-        
-        /* Header */
         header { text-align: center; padding: 50px 0; border-bottom: 1px solid #1e293b; }
         h1 { font-size: 3rem; color: #38bdf8; margin-bottom: 10px; }
         .badge { background: #0ea5e9; padding: 5px 15px; border-radius: 20px; font-size: 14px; }
-
-        /* Sections */
         section { padding: 40px 0; }
         h2 { color: #38bdf8; margin-bottom: 20px; border-left: 5px solid #38bdf8; padding-left: 15px; }
-
-        /* Projects Grid */
         .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .project-card { background: #1e293b; padding: 20px; border-radius: 12px; border: 1px solid #334155; }
         .project-card:hover { transform: translateY(-10px); border-color: #38bdf8; }
         .project-card h3 { color: #38bdf8; margin-bottom: 10px; }
         .project-card p { font-size: 14px; color: #94a3b8; }
-
-        /* Skills */
         .skills { display: flex; flex-wrap: wrap; gap: 10px; }
         .skill-tag { background: #334155; padding: 8px 15px; border-radius: 5px; font-size: 14px; }
         .skill-tag:hover { background: #38bdf8; color: #0f172a; }
-
-        /* Footer */
         footer { text-align: center; padding: 30px; border-top: 1px solid #1e293b; color: #64748b; }
+        .btn { border: 1px solid #38bdf8; background: transparent; transition: 0.5s; }
+        .btn:hover { background: #38bdf8; color: #0f172a !important; }
     </style>
 </head>
-
-
 <body>
-
-
     <div class="container">
         <header>
             <h1>DEVELOPER ISM@!L</h1>
-        <h3 id="greeting-text" style="color: #38bdf8;">Loading...</h3>
-        
-            <div class="badge">BCA Final Year | Developer</div>
+            <h3 id="greeting-text" style="color: #38bdf8;">Loading...</h3>
+            <button onclick="window.askName()" class="btn" style="margin-top: 20px; padding:10px 20px; color: #38bdf8; cursor: pointer; border-radius: 8px;">
+                Click for a Surprise!
+            </button>
+            <div class="badge" style="display: block; width: fit-content; margin: 20px auto;">BCA Final Year | Developer</div>
             <p style="margin-top: 15px;">Building digital solutions with Code & Logic.</p>
         </header>
 
@@ -63,7 +53,7 @@
                 </div>
                 <div class="project-card">
                     <h3>Future Project</h3>
-                    <p>Yahan main apna naya Python ya Java based project add karunga. Raat-din kaam jari hai! 🚀</p>
+                    <p>Yahan main apna naya Python ya Java based project add karunga.</p>
                     <p style="margin-top: 10px; font-weight: bold; color: #38bdf8;">Tech: Coding in Progress</p>
                 </div>
             </div>
@@ -77,7 +67,6 @@
                 <span class="skill-tag">Python</span>
                 <span class="skill-tag">HTML/CSS</span>
                 <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">Vercel Deployment</span>
             </div>
         </section>
 
@@ -85,26 +74,28 @@
             <p>&copy; 2026 Ismail Amin Khan. Made in Mumbai.</p>
         </footer>
     </div>
-   
+    
     <script>
-    // Ye pehle wala greeting logic hai (Automated)
-    window.addEventListener('load', function() {
-        const currentHour = new Date().getHours();
-        const displayElement = document.getElementById("greeting-text");
-        
-        if (displayElement) {
-            if (currentHour < 12) {
-                displayElement.innerText = "Good Morning, Ismail here!";
-            } else if (currentHour < 17) {
-                displayElement.innerText = "Good Afternoon, Ismail here!";
-            } else {
-                displayElement.innerText = "Good Evening, Ismail here!";
+        // Greeting Logic
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const currentHour = new Date().getHours();
+            const displayElement = document.getElementById("greeting-text");
+            if (displayElement) {
+                if (currentHour < 12) displayElement.innerText = "Good Morning, Ismail here!";
+                else if (currentHour < 17) displayElement.innerText = "Good Afternoon, Ismail here!";
+                else displayElement.innerText = "Good Evening, Ismail here!";
             }
-            displayElement.style.color = "#38bdf8"; // Blue color
-        }
-    });
+        });
 
-
-</script>
+        // Majboot Function for Button
+        window.askName = function() {
+            let userName = prompt("Aapka naam kya hai?");
+            if (userName != null && userName != "") {
+                alert("Salaam, " + userName + "! Ismail Amin Khan ki portfolio visit karne ke liye shukriya.");
+            } else if (userName === "") {
+                alert("Arey, apna naam toh batao!");
+            }
+        };
+    </script>
 </body>
 </html>
