@@ -34,11 +34,16 @@
         footer { text-align: center; padding: 30px; border-top: 1px solid #1e293b; color: #64748b; }
     </style>
 </head>
+
+
 <body>
+
 
     <div class="container">
         <header>
-            <h1>Ismail Amin Khan</h1>
+            <h1>DEVELOPER ISM@!L</h1>
+        <h3 id="greeting-text" style="color: #38bdf8;">Loading...</h3>
+        
             <div class="badge">BCA Final Year | Developer</div>
             <p style="margin-top: 15px;">Building digital solutions with Code & Logic.</p>
         </header>
@@ -80,6 +85,26 @@
             <p>&copy; 2026 Ismail Amin Khan. Made in Mumbai.</p>
         </footer>
     </div>
+   
+    <script>
+    // Ye pehle wala greeting logic hai (Automated)
+    window.addEventListener('load', function() {
+        const currentHour = new Date().getHours();
+        const displayElement = document.getElementById("greeting-text");
+        
+        if (displayElement) {
+            if (currentHour < 12) {
+                displayElement.innerText = "Good Morning, Ismail here!";
+            } else if (currentHour < 17) {
+                displayElement.innerText = "Good Afternoon, Ismail here!";
+            } else {
+                displayElement.innerText = "Good Evening, Ismail here!";
+            }
+            displayElement.style.color = "#38bdf8"; // Blue color
+        }
+    });
 
+
+</script>
 </body>
 </html>
