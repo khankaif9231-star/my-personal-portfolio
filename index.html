@@ -69,6 +69,36 @@
                 <span class="skill-tag">JavaScript</span>
             </div>
         </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+               <div class="project-card"> 
+                <form id="contactForm">
+
+                
+                    <div class="margin-bottom: 15px;">
+                        <input type="text" id="name"
+                    
+       placeholder="Your Name" style="width:100%; padding: 10px; border-radius: 5px; border: 1px solid #334155; background: #0f172a; color: white;">
+
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <input type="email" id="email"
+        placeholder="Your Email" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #334155; background: #0f172a; color: white;">
+
+                    </div>
+                    <div style="margin-bottom: 15px;">
+    <textarea id="message" placeholder="Write Message..." 
+    style="width:100%; padding:10px; border-radius: 5px; border: 1px solid #334155; background: #0f172a; color: white; height:100px; outline: none;"></textarea>
+</div>
+                    </div>
+                    <button type="submit"class="btn" style="padding: 10px 20px; cursor: pointer; color: #38bdf8;">Send Message</button>
+                </form>
+                </div>
+
+
+</div>
+                    
+        </section>
 
         <footer>
             <p>&copy; 2026 Ismail Amin Khan. Made in Mumbai.</p>
@@ -96,6 +126,30 @@
                 alert("Arey, apna naam toh batao!");
             }
         };
-    </script>
-</body>
-</html>
+       document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        
+        // Spelling theek ki: 'documnet' -> 'document'
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Spelling theek ki: 'meassage' -> 'message'
+        if (name === "" || email === "" || message === "") {
+            alert("Missing, All detailed fill-up compulsory!");}
+
+            else if (message.length<10){
+                alert("please Message Some Additionals Characters!(minimums 10 characters )");
+
+            }
+        
+        else {
+            alert("Thank U " + name + "! I Receive Your Message.");
+            this.reset();
+        }
+        
+        
+    }); // Bracket band kiya yahan
+</script>
+        </body>
+        </html>
