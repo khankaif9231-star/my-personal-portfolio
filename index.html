@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   
+   <button id ="theme-toggle"class="theme-btn">
+    <i class="fas fa-moon">
+
+    </i>
+   </button>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ismail Amin Khan | Portfolio</title>
@@ -52,11 +56,97 @@
 .project-card:hover .project-img {
     transform:scale(1.1);
 }
+.skill-tag {
+    background: #1e293b;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    display:flex;
+    align-items: center;
+    gap: 10px;/* Icon Aur Text Ke Beech gap*/
+    border: 1px solid #334155
+}
+
+.skill-tag-hover {
+    border-color: #38bdf8;
+    background: #0f172a;
+    transform:translateY(-3px);
+}
+.resume-btn {
+    background: linear-gradient(135deg,#38bdf8,#0ea5e9);
+    color:#0f172a;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.4s cubic-bezier( 0.175, 0.32, 1.275);
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.4);
+}
+
+.resume-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(56, 189, 248,0.4);
+}
+/* Secondary Button (Hire me)*/
+.secondary-btn {
+    border: 2px solid #38bdf8;
+    color: #38bdf8;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight:600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    
+}
+.secondary-btn:hover {
+ transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 25px rgba(56, 189, 248,0.4);
+}
+/* Light  mode varibles */
+:root {
+    --big-color: #0f172a;
+    --text-color: #f8fafc;
+}
+body.light-mode {
+    --big-color: #f8fafc;
+    --text-color: #0f172a;
+    background-color: var(--big-color);
+    color:var (--text-color);
+}
+/* Button Styling.....*/
+.theme-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    background: #38bdf8;
+    color: white;
+    border: none;
+    z-index:1000;
+}
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
+            <div class="text-align: center;margin-top:20px;">
+                <a href="Ismail_Khan_Resume.pdf" download class="resume-btn">
+                    <i class="fas fa-file-download"></i> Download My Resume
+                </a>
+                <a href="#contact" class="secondary-btn">
+                    <i class="fas fa-envelope"></i> Hire Me
+                </a>
+            </div>
             <h1>DEVELOPER ISM@!L</h1>
             <h3 id="greeting-text" style="color: #38bdf8;">Loading...</h3>
             <button onclick="window.askName()" class="btn" style="margin-top: 20px; padding:10px 20px; color: #38bdf8; cursor: pointer; border-radius: 8px;">
@@ -67,7 +157,9 @@
         </header>
 
         <section id="about">
+            
             <h2>About Me</h2>
+            
             <p>Main ek aspiring Software Engineer hoon jo backend aur cloud technologies seekh raha hai. Mera goal real-world problems ke liye scalable solutions banana hai.</p>
         </section>
 
@@ -95,11 +187,16 @@
         <section id="skills">
             <h2>Technical Skills</h2>
             <div class="skills">
-                <span class="skill-tag">Java</span>
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">HTML/CSS</span>
-                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag"><i class="fab fa-java"
+                    style="color: #f89280 ;"></i>Java</span>
+                <span class="skill-tag"><i class="fab fa-python"
+                    style="color: #3776ab"></i>Python</span>
+                <span class="skill-tag"><i class="fab fa-html5"
+                    style="color:#e34f26"></i>HTML/CSS</span>
+                <span class="skill-tag"><i class="fab fa-js"
+                    style="color:#f7df1e"></i>JavaScript</span>
+                <span class="skill-tag"><i class="fab fa-database"
+                    style="color:#e34f26"></i>SQL|DBMS</span>
             </div>
         </section>
         <section id="contact">
@@ -196,6 +293,21 @@
         
         
     }); // Bracket band kiya yahan
+   
+        const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+const icon = themeToggle.querySelector('i');
+
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+    
+    // Icon badalne ke liye logic
+    if (body.classList.contains('light-mode')) {
+        icon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+        icon.classList.replace('fa-sun', 'fa-moon');
+    }
+});
 </script>
         </body>
         </html>
