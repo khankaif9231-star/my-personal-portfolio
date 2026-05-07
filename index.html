@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ismail Amin Khan | Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; transition: 0.3s; }
         body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: white; line-height: 1.6; }
@@ -21,23 +23,35 @@
         .project-card p { font-size: 14px; color: #94a3b8; }
         .skills { display: flex; flex-wrap: wrap; gap: 10px; }
         .skill-tag { background: #334155; padding: 8px 15px; border-radius: 5px; font-size: 14px; }
-        .skill-tag:hover { background: #38bdf8; color: #0f172a; }
+        .skill-tag:hover { transform: translateY(-8px);  color: #38bdf8; }
         footer { text-align: center; padding: 30px; border-top: 1px solid #1e293b; color: #64748b; }
         .btn { border: 1px solid #38bdf8; background: transparent; transition: 0.5s; }
         .btn:hover { background: #38bdf8; color: #0f172a !important; }
-        .social-icon {
-            color: #94a3b8;
-            font-size: 24px;
-            margin: 0 15px;
-            text-decoration:none;
-            display: inline-block;
-            transition: 0.3s;
-        }
+    
+.social-links { 
+    text-align: center; 
+    padding: 20px 0; 
+}
 
-        .social-icon:hover {
-            color: #38bdf8;
-            transform:translateY(-5px) scale(1.2);
-        }
+.social-icon {
+    color: #94a3b8;
+    font-size: 28px; /* Thoda bada kiya taaki dikhe */
+    margin: 0 15px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease; /* Smooth transition ke liye */
+}
+
+.social-icon:hover {
+    color: #38bdf8;
+    transform: translateY(-8px) scale(1.2); /* Hover magic */
+}
+.project-img {
+    transition: transform 0.5s ease;
+}
+.project-card:hover .project-img {
+    transform:scale(1.1);
+}
     </style>
 </head>
 <body>
@@ -61,9 +75,14 @@
             <h2>My Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
+                     <div style="overflow:hidden; border-radius: 8px;">
+                        <img src="Portfolio-sss.png"
+                        alt="Ismail Portfolio" clas="project-img" style="width: 100%; border-radius:8px; ">
+                    </div>
+                    
                     <h3>Portfolio Website</h3>
                     <p>Mera personal portfolio jo HTML, CSS aur JavaScript se bana hai aur Vercel par live hai.</p>
-                    <p style="margin-top: 10px; font-weight: bold; color: #38bdf8;">Tech: HTML, CSS, Vercel</p>
+                    <p style="margin-top: 10px; font-weight: bold; color: #38bdf8;">Tech: HTML, CSS,JS, Vercel D,</p>
                 </div>
                 <div class="project-card">
                     <h3>Future Project</h3>
@@ -113,12 +132,20 @@
 </div>
                     
         </section>
-        <div class="social-links" style="text-align:center; margin-bottom: 20px;">
-            <a href="https://linkedin.com/in/ismail-amin-khan"  target="_blank" class="social-icon">
+       <div class="social-links" style="text-align: center; margin-bottom: 20px;">
+    
+    <a href="https://www.linkedin.com/in/ismail-amin-khan?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-icon">
+        <i class="fab fa-linkedin"></i>
+    </a>
+      <a href="https://github.com/IsmailAminKhan" target="_blank" class="social-icon">
+        <i class="fab fa-github"></i>
+    </a>
+    <a href="https://instagram.com/ismail_amin_khan" target="_blank" class="social-icon">
+        <i class="fab fa-instagram"></i>
+    </a>
 
-           </a>
-        </div>
-
+   
+</div>
         <footer>
             <p>&copy; 2026 Ismail Amin Khan. Made in Mumbai.</p>
         </footer>
